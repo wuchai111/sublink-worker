@@ -1,17 +1,8 @@
-{
-  "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "WORKER-NAME",
-  "main": "src/index.ts",
-  "compatibility_date": "2025-02-04",
-  "observability": {
-    "enabled": true
-  },
-
   // Add this to your wrangler.jsonc
   "kv_namespaces": [
     {
       "binding": "KV",
-      "id": "55f7a09b886a41ba93839f2ecbfe622b",
+      "id": "7733f7055ce345b8b5ea49a327c17f8e",
       
       // Optional: preview_id used when running `wrangler dev` for local dev
       "preview_id": "<ID_OF_PREVIEW_KV_NAMESPACE_FOR_LOCAL_DEVELOPMENT>"
