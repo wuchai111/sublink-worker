@@ -1,12 +1,20 @@
-#:schema node_modules/wrangler/config-schema.json
-name = "sublink-worker"
-main = "src/worker.jsx"
-compatibility_date = "2024-07-24"
-compatibility_flags = ["nodejs_compat"]
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "WORKER-NAME",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-02-04",
+  "observability": {
+    "enabled": true
+  },
 
-kv_namespaces = [
-  { binding = "SUBLINK_KV", id = "55f7a09b886a41ba93839f2ecbfe622b" }
-]
-
-[assets]
-directory = "./public"
+  // Add this to your wrangler.jsonc
+  "kv_namespaces": [
+    {
+      "binding": "KV",
+      "id": "55f7a09b886a41ba93839f2ecbfe622b",
+      
+      // Optional: preview_id used when running `wrangler dev` for local dev
+      "preview_id": "<ID_OF_PREVIEW_KV_NAMESPACE_FOR_LOCAL_DEVELOPMENT>"
+    }
+  ]
+}
